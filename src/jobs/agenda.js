@@ -1,7 +1,11 @@
 const Agenda = require('agenda');
 // const email = require('./email');
 
-const connectionOpts = { db: { address: process.env.DATABASE_URL, collection: 'agendaJobs' } };
+let connectionOpts;
+if (process.env.NODE_ENV === 'test') {
+  connectionOpts = { db: { address: process.env.DATABASE_URL, collection: 'agendaJobs' } };
+} else
+  connectionOpts = { db: { address: process.env.TEST_DATABASE_URL, collection: 'agendaJobs' } };
 
 const agenda = new Agenda(connectionOpts);
 
