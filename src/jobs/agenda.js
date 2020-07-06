@@ -3,9 +3,8 @@ const Agenda = require('agenda');
 
 let connectionOpts;
 if (process.env.NODE_ENV === 'test') {
-  connectionOpts = { db: { address: process.env.DATABASE_URL, collection: 'agendaJobs' } };
-} else
   connectionOpts = { db: { address: process.env.TEST_DATABASE_URL, collection: 'agendaJobs' } };
+} else connectionOpts = { db: { address: process.env.DATABASE_URL, collection: 'agendaJobs' } };
 
 const agenda = new Agenda(connectionOpts);
 
