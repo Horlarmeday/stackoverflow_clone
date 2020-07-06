@@ -1,4 +1,4 @@
-import { validateAnswer } from '../validations/questionValidation';
+import { validateAnswer, validateSearchQuery } from '../validations/questionValidation';
 import { answerQuestionsService, searchAnswersService } from '../service/answerService';
 
 class AnswerController {
@@ -23,7 +23,7 @@ class AnswerController {
       const newAnswer = await answerQuestionsService({ id, sub, answer });
       if (!newAnswer) return res.status(400).json('An error occurred');
 
-      return res.status(200).json({
+      return res.status(201).json({
         message: 'Question answered',
         data: newAnswer,
       });
@@ -42,12 +42,15 @@ class AnswerController {
    * @returns {json} json object with message and answers data
    */
   static async searchAnswers(req, res, next) {
+    const { error } = validateSearchQuery(req.query);
+    if (error) return res.status(400).json(error.details[0].message);
+
     const {
-      query: { currentPage, search },
+      query: { currentPage, pageLimit, search },
     } = req;
 
     try {
-      const answers = await searchAnswersService({ currentPage, search });
+      const answers = await searchAnswersService({ currentPage, pageLimit, search });
 
       return res.status(200).json({
         message: 'Data Retrieved',

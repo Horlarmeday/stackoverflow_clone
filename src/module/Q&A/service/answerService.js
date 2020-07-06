@@ -1,6 +1,7 @@
 import { answerQuestion, getAnswers, searchAnswers } from '../repository/answerRepository';
 import { getQuestionById, getSubscribersEmail } from '../repository/questionRepository';
-import { sendEmail } from '../../../helpers/sendMail';
+// import { sendEmail } from '../../../helpers/sendMail';
+import agenda from '../../../jobs/agenda';
 
 /**
  * send emails to subscribers
@@ -16,7 +17,7 @@ const mailSubscribers = async id => {
     const mails = emails.map(email => {
       return email.user.email;
     });
-    await sendEmail(mails);
+    return agenda.schedule('in 20 minutes', 'subscribers email', { mails });
   }
   return false;
 };
@@ -50,9 +51,9 @@ export const answerQuestionsService = async body => {
  * @param body
  */
 export const searchAnswersService = async body => {
-  const { currentPage, search } = body;
+  const { currentPage, search, pageLimit } = body;
   if (search) {
-    return searchAnswers(search);
+    return searchAnswers(body);
   }
-  return getAnswers(currentPage);
+  return getAnswers({ currentPage, pageLimit });
 };

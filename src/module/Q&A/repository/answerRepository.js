@@ -30,12 +30,15 @@ export const answerQuestion = async data => {
  */
 export const searchAnswers = async data => {
   const { limit, offset } = calculateLimitAndOffset();
-  const answers = await Answer.find({ $text: { $search: data } }, { score: { $meta: 'textScore' } })
+  const answers = await Answer.find(
+    { $text: { $search: data.search } },
+    { score: { $meta: 'textScore' } }
+  )
     .limit(limit)
     .skip(offset)
     .select({ __v: 0 })
     .sort({ score: { $meta: 'textScore' } });
-  const meta = paginate(data, await countDocument(Question), answers);
+  const meta = paginate(data.currentPage, await countDocument(Question), answers, data.pageLimit);
   return { answers, meta };
 };
 
@@ -53,6 +56,6 @@ export const getAnswers = async data => {
     .skip(offset)
     .select({ __v: 0 })
     .sort('-createdAt');
-  const meta = paginate(data, await countDocument(Question), answers);
+  const meta = paginate(data.currentPage, await countDocument(Question), answers, data.pageLimit);
   return { answers, meta };
 };
