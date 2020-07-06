@@ -1,6 +1,7 @@
 import {
   createQuestion,
   downVoteQuestion,
+  findExistingSubscriber,
   getQuestionById,
   getQuestions,
   searchQuestions,
@@ -28,11 +29,11 @@ export const askQuestionService = async body => {
  * @param body
  */
 export const getQuestionsService = async body => {
-  const { currentPage, search } = body;
+  const { currentPage, pageLimit, search } = body;
   if (search) {
-    return searchQuestions(search);
+    return searchQuestions(body);
   }
-  return getQuestions(currentPage);
+  return getQuestions({ currentPage, pageLimit });
 };
 
 /**
@@ -76,7 +77,9 @@ export const subscribeQuestionService = async body => {
   const { sub, id } = body;
   const user = await getUserById(sub);
 
-  if (user) {
+  const existingSubscriber = await findExistingSubscriber(body);
+
+  if (user && !existingSubscriber.length) {
     return subscribeQuestion({ user, id });
   }
   return null;

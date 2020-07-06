@@ -1,8 +1,9 @@
-import { validateQuestion } from '../validations/questionValidation';
+import { validateQuestion, validateSearchQuery } from '../validations/questionValidation';
 import {
   askQuestionService,
   downVoteQuestionsService,
-  getQuestionsService, subscribeQuestionService,
+  getQuestionsService,
+  subscribeQuestionService,
   upVoteQuestionsService,
 } from '../service/questionService';
 
@@ -26,7 +27,7 @@ class QuestionController {
     try {
       const newQuestion = await askQuestionService({ question, sub });
 
-      return res.status(200).json({
+      return res.status(201).json({
         message: 'Question created',
         data: newQuestion,
       });
@@ -45,12 +46,15 @@ class QuestionController {
    * @returns {json} json object with message and questions data
    */
   static async getQuestions(req, res, next) {
+    const { error } = validateSearchQuery(req.query);
+    if (error) return res.status(400).json(error.details[0].message);
+
     const {
-      query: { currentPage, search },
+      query: { currentPage, pageLimit, search },
     } = req;
 
     try {
-      const questions = await getQuestionsService({ currentPage, search });
+      const questions = await getQuestionsService({ currentPage, pageLimit, search });
 
       return res.status(200).json({
         message: 'Data Retrieved',
@@ -126,9 +130,9 @@ class QuestionController {
 
     try {
       const subscription = await subscribeQuestionService({ id, sub });
-      if (!subscription) return res.status(400).json('An error occurred');
+      if (!subscription) return res.status(400).json('You cannot subscribe twice');
 
-      return res.status(200).json({
+      return res.status(201).json({
         message: 'Successfully subscribed to question',
         data: subscription,
       });

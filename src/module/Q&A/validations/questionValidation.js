@@ -17,3 +17,12 @@ export function validateAnswer(req) {
   });
   return schema.validate(req);
 }
+
+export function validateSearchQuery(req) {
+  const schema = Joi.object({
+    currentPage: Joi.number().optional(),
+    pageLimit: Joi.number().optional(),
+    search: Joi.string().optional(),
+  });
+  return schema.validate(req);
+}

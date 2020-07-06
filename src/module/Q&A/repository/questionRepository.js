@@ -1,6 +1,7 @@
 import Question from '../model/question';
 import { calculateLimitAndOffset, paginate } from '../../../helpers/helper';
 import Subscription from '../model/subscription';
+import User from '../../User/model/user';
 
 /**
  * create a question
@@ -44,7 +45,7 @@ export const getQuestions = async data => {
     .skip(offset)
     .select({ __v: 0 })
     .sort('-createdAt');
-  const meta = paginate(data, await countDocument(Question), questions);
+  const meta = paginate(data.currentPage, await countDocument(Question), questions, data.pageLimit);
   return { questions, meta };
 };
 
@@ -58,14 +59,14 @@ export const getQuestions = async data => {
 export const searchQuestions = async data => {
   const { limit, offset } = calculateLimitAndOffset();
   const questions = await Question.find(
-    { $text: { $search: data } },
+    { $text: { $search: data.search } },
     { score: { $meta: 'textScore' } }
   )
     .limit(limit)
     .skip(offset)
     .select({ __v: 0 })
     .sort({ score: { $meta: 'textScore' } });
-  const meta = paginate(data, await countDocument(Question), questions);
+  const meta = paginate(data.currentPage, await countDocument(Question), questions, data.pageLimit);
   return { questions, meta };
 };
 
@@ -119,6 +120,17 @@ export const downVoteQuestion = async data => {
 };
 
 /**
+ * finds if user already subscribed
+ *
+ * @static
+ * @returns {json} object of subscription(s)
+ * @param data accepts question id and user id
+ */
+export const findExistingSubscriber = async data => {
+  return Subscription.find({ question: data.id, 'user._id': data.sub });
+};
+
+/**
  * subscribe to a question
  *
  * @static
@@ -127,6 +139,7 @@ export const downVoteQuestion = async data => {
  */
 export const subscribeQuestion = async data => {
   const { user, id } = data;
+
   const subscription = new Subscription({
     user,
     question: id,
