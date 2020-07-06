@@ -1,8 +1,8 @@
 import { afterAll, beforeAll, describe, expect, it } from '@jest/globals';
-import Question from '../../src/module/Q&A/model/question';
-import User from '../../src/module/User/model/user';
-import Subscription from '../../src/module/Q&A/model/subscription';
-import server from '../../src/startup/server';
+import Question from '../src/module/Q&A/model/question';
+import User from '../src/module/User/model/user';
+import Subscription from '../src/module/Q&A/model/subscription';
+import server from '../src/startup/server';
 
 const request = require('supertest');
 

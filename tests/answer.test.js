@@ -1,9 +1,9 @@
 /* eslint-disable no-underscore-dangle */
 import { afterAll, beforeAll, describe, expect, it } from '@jest/globals';
-import Question from '../../src/module/Q&A/model/question';
-import Answer from '../../src/module/Q&A/model/answer';
-import User from '../../src/module/User/model/user';
-import server from '../../src/startup/server';
+import Question from '../src/module/Q&A/model/question';
+import Answer from '../src/module/Q&A/model/answer';
+import User from '../src/module/User/model/user';
+import server from '../src/startup/server';
 
 const request = require('supertest');
 

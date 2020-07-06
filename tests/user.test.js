@@ -1,8 +1,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { afterAll, describe, expect, it } from '@jest/globals';
 
-import User from '../../src/module/User/model/user';
-import server from '../../src/startup/server';
+import User from '../src/module/User/model/user';
+import server from '../src/startup/server';
 
 const request = require('supertest');
 

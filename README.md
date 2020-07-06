@@ -80,16 +80,17 @@ The features of this project include the following.
 - Register a user
 - Login a user
 - Authenticated user can create question
-- User can up vote a question
-- User can down vote a question
+- Users can up vote a question
+- Users can down vote a question
 - User can answer a question 
 - User can subscribe to a question
 - User get email notification as soon as question is answered
 - User can only subscribe once to a question
+- Questions, answers and users can be searched and it will return search based on the index score
 
 
 ## Documentation
-The API documentation for testing the endpoints is located <a href="">here</a>
+The API documentation for testing the endpoints is located <a href="https://documenter.getpostman.com/view/9548350/T17GgUCg">here</a>
 
 ## Tests
 To run the tests
