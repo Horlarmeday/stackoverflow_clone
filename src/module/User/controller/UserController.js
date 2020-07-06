@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { validateUserLogin, validateUserSignup } from '../userValidations';
 import { userSignUpService, loginUserService, searchUsersService } from '../service/userService';
+import { validateSearchQuery } from '../../Q&A/validations/questionValidation';
 
 class UserController {
   /**
@@ -62,6 +63,9 @@ class UserController {
    * @returns {json} json object with message and user(s) data
    */
   static async searchUsers(req, res, next) {
+    const { error } = validateSearchQuery(req.query);
+    if (error) return res.status(400).json(error.details[0].message);
+
     const {
       query: { currentPage, search },
     } = req;
