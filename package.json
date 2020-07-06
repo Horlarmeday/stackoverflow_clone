@@ -7,7 +7,8 @@
     "dev": "nodemon --exec babel-node src/app.js",
     "start": "node dist/app.js",
     "build": "babel src --out-dir dist",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "jest": {
     "testEnvironment": "node",

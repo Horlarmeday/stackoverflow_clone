@@ -1,0 +1,2673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      Global - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
+
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Braintree SDK Client Reference
+    </h3>
+
+    
+
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#answerQuestion">answerQuestion</a></li><li><a href="global.html#answerQuestionsService">answerQuestionsService</a></li><li><a href="global.html#askQuestionService">askQuestionService</a></li><li><a href="global.html#calculateLimitAndOffset">calculateLimitAndOffset</a></li><li><a href="global.html#countDocument">countDocument</a></li><li><a href="global.html#createQuestion">createQuestion</a></li><li><a href="global.html#createUser">createUser</a></li><li><a href="global.html#downVoteQuestion">downVoteQuestion</a></li><li><a href="global.html#downVoteQuestionsService">downVoteQuestionsService</a></li><li><a href="global.html#findExistingSubscriber">findExistingSubscriber</a></li><li><a href="global.html#findExistingUser">findExistingUser</a></li><li><a href="global.html#findUserByEmail">findUserByEmail</a></li><li><a href="global.html#getAnswers">getAnswers</a></li><li><a href="global.html#getQuestionById">getQuestionById</a></li><li><a href="global.html#getQuestions">getQuestions</a></li><li><a href="global.html#getQuestionsService">getQuestionsService</a></li><li><a href="global.html#getSubscribersEmail">getSubscribersEmail</a></li><li><a href="global.html#getUserById">getUserById</a></li><li><a href="global.html#getUsers">getUsers</a></li><li><a href="global.html#loginUserService">loginUserService</a></li><li><a href="global.html#mailSubscribers">mailSubscribers</a></li><li><a href="global.html#paginate">paginate</a></li><li><a href="global.html#searchAnswers">searchAnswers</a></li><li><a href="global.html#searchAnswersService">searchAnswersService</a></li><li><a href="global.html#searchQuestions">searchQuestions</a></li><li><a href="global.html#searchUsers">searchUsers</a></li><li><a href="global.html#searchUsersService">searchUsersService</a></li><li><a href="global.html#subscribeQuestion">subscribeQuestion</a></li><li><a href="global.html#subscribeQuestionService">subscribeQuestionService</a></li><li><a href="global.html#upVoteQuestion">upVoteQuestion</a></li><li><a href="global.html#upVoteQuestionsService">upVoteQuestionsService</a></li><li><a href="global.html#userSignUpService">userSignUpService</a></li></ul>
+  </nav>
+
+  <div id="main">
+    
+      <h1 class="page-title">
+        Global
+      </h1>
+    
+
+    
+
+<section>
+  <header>
+    
+      <h2>
+        
+        
+        
+      </h2>
+
+      
+    
+  </header>
+
+  <article>
+    <div class="container-overview">
+      
+        
+
+        
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+
+<h4 class="name" id="answerQuestion">
+  <span class="type-signature">(constant) </span>answerQuestion<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>create answer</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_answerRepository.js.html">module/Q&A/repository/answerRepository.js</a>, <a href="module_Q&A_repository_answerRepository.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="answerQuestionsService">
+  <span class="type-signature">(constant) </span>answerQuestionsService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>answer question service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_answerService.js.html">module/Q&A/service/answerService.js</a>, <a href="module_Q&A_service_answerService.js.html#line32">line 32</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="askQuestionService">
+  <span class="type-signature">(constant) </span>askQuestionService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>ask question service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_questionService.js.html">module/Q&A/service/questionService.js</a>, <a href="module_Q&A_service_questionService.js.html#line20">line 20</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="countDocument">
+  <span class="type-signature">(constant) </span>countDocument<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>utility function that counts the number of documents in a collection</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line30">line 30</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="createQuestion">
+  <span class="type-signature">(constant) </span>createQuestion<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>create a question</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="createUser">
+  <span class="type-signature">(constant) </span>createUser<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>create user data</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_repository_userRepository.js.html">module/User/repository/userRepository.js</a>, <a href="module_User_repository_userRepository.js.html#line34">line 34</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="downVoteQuestion">
+  <span class="type-signature">(constant) </span>downVoteQuestion<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>decreases question vote</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line110">line 110</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="downVoteQuestionsService">
+  <span class="type-signature">(constant) </span>downVoteQuestionsService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>downvote question service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_questionService.js.html">module/Q&A/service/questionService.js</a>, <a href="module_Q&A_service_questionService.js.html#line61">line 61</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="findExistingSubscriber">
+  <span class="type-signature">(constant) </span>findExistingSubscriber<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>finds if user already subscribed</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line129">line 129</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="findExistingUser">
+  <span class="type-signature">(constant) </span>findExistingUser<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>finds if user exists</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_repository_userRepository.js.html">module/User/repository/userRepository.js</a>, <a href="module_User_repository_userRepository.js.html#line23">line 23</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="findUserByEmail">
+  <span class="type-signature">(constant) </span>findUserByEmail<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>find user by email</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_repository_userRepository.js.html">module/User/repository/userRepository.js</a>, <a href="module_User_repository_userRepository.js.html#line12">line 12</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="getAnswers">
+  <span class="type-signature">(constant) </span>getAnswers<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>gets all answers</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_answerRepository.js.html">module/Q&A/repository/answerRepository.js</a>, <a href="module_Q&A_repository_answerRepository.js.html#line52">line 52</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="getQuestionById">
+  <span class="type-signature">(constant) </span>getQuestionById<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>get question by id</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line80">line 80</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="getQuestions">
+  <span class="type-signature">(constant) </span>getQuestions<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>gets all questions</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line41">line 41</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="getQuestionsService">
+  <span class="type-signature">(constant) </span>getQuestionsService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>gets questions service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_questionService.js.html">module/Q&A/service/questionService.js</a>, <a href="module_Q&A_service_questionService.js.html#line31">line 31</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="getSubscribersEmail">
+  <span class="type-signature">(constant) </span>getSubscribersEmail<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>get email of subscribers of a question</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line158">line 158</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="getUserById">
+  <span class="type-signature">(constant) </span>getUserById<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>get user by id</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_repository_userRepository.js.html">module/User/repository/userRepository.js</a>, <a href="module_User_repository_userRepository.js.html#line91">line 91</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="getUsers">
+  <span class="type-signature">(constant) </span>getUsers<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>get users</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_repository_userRepository.js.html">module/User/repository/userRepository.js</a>, <a href="module_User_repository_userRepository.js.html#line73">line 73</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="loginUserService">
+  <span class="type-signature">(constant) </span>loginUserService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>login a user service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_service_userService.js.html">module/User/service/userService.js</a>, <a href="module_User_service_userService.js.html#line25">line 25</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="searchAnswers">
+  <span class="type-signature">(constant) </span>searchAnswers<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>search answers</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_answerRepository.js.html">module/Q&A/repository/answerRepository.js</a>, <a href="module_Q&A_repository_answerRepository.js.html#line31">line 31</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="searchAnswersService">
+  <span class="type-signature">(constant) </span>searchAnswersService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>search answers service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_answerService.js.html">module/Q&A/service/answerService.js</a>, <a href="module_Q&A_service_answerService.js.html#line53">line 53</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="searchQuestions">
+  <span class="type-signature">(constant) </span>searchQuestions<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>search questions</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line59">line 59</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="searchUsers">
+  <span class="type-signature">(constant) </span>searchUsers<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>search users</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_repository_userRepository.js.html">module/User/repository/userRepository.js</a>, <a href="module_User_repository_userRepository.js.html#line54">line 54</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="searchUsersService">
+  <span class="type-signature">(constant) </span>searchUsersService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>search users service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_service_userService.js.html">module/User/service/userService.js</a>, <a href="module_User_service_userService.js.html#line43">line 43</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="subscribeQuestion">
+  <span class="type-signature">(constant) </span>subscribeQuestion<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>subscribe to a question</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line140">line 140</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="subscribeQuestionService">
+  <span class="type-signature">(constant) </span>subscribeQuestionService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>subscribe question service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_questionService.js.html">module/Q&A/service/questionService.js</a>, <a href="module_Q&A_service_questionService.js.html#line76">line 76</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="upVoteQuestion">
+  <span class="type-signature">(constant) </span>upVoteQuestion<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>increase question vote</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_repository_questionRepository.js.html">module/Q&A/repository/questionRepository.js</a>, <a href="module_Q&A_repository_questionRepository.js.html#line91">line 91</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="upVoteQuestionsService">
+  <span class="type-signature">(constant) </span>upVoteQuestionsService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>upvote question service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_questionService.js.html">module/Q&A/service/questionService.js</a>, <a href="module_Q&A_service_questionService.js.html#line46">line 46</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+            
+
+<h4 class="name" id="userSignUpService">
+  <span class="type-signature">(constant) </span>userSignUpService<span class="type-signature"></span>
+</h4>
+
+
+
+
+  <div class="description">
+    <p>sign up a user service</p>
+  </div>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_User_service_userService.js.html">module/User/service/userService.js</a>, <a href="module_User_service_userService.js.html#line11">line 11</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+          
+        
+    
+
+    
+      <h3 class="subsection-title">Methods</h3>
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#calculateLimitAndOffset">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="calculateLimitAndOffset">
+      <span class="type-signature"></span>calculateLimitAndOffset<span class="signature">(currentPage, pageLimit)</span><span class="type-signature"> &rarr; {object}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>currentPage</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      number
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>page number to get</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>pageLimit</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      number
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>number of items per page/request</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="helpers_helper.js.html">helpers/helper.js</a>, <a href="helpers_helper.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#mailSubscribers">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="mailSubscribers">
+      <span class="type-signature">(async) </span>mailSubscribers<span class="signature">(id)</span><span class="type-signature"> &rarr; {json}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>send emails to subscribers</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>id</code></td>
+        
+
+        <td class="type">
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>accepts the id of the question</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="module_Q&A_service_answerService.js.html">module/Q&A/service/answerService.js</a>, <a href="module_Q&A_service_answerService.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#paginate">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="paginate">
+      <span class="type-signature"></span>paginate<span class="signature">(currentPage, count, rows, pageLimit)</span><span class="type-signature"> &rarr; {object}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>currentPage</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      number
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>page number to get</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>count</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      number
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>total number of items</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>rows</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      array
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>items</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>pageLimit</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      number
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>number of items per page/request</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="helpers_helper.js.html">helpers/helper.js</a>, <a href="helpers_helper.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+    
+
+    
+  </article>
+</section>
+
+
+
+
+  </div>
+
+  <br class="clear">
+
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+  </footer>
+
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+
+</body>
+</html>
